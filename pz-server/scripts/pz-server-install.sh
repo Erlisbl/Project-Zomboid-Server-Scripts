@@ -1,15 +1,3 @@
-#!/bin/bash
-#Scripts are licensed under Attribution-NonCommercial 4.0 International. Commercial permission must be saught by original author.
-#Make sure script is run on debian wheezy
-#Script Created by Connall Lindsay, Assistance by Kirrus
-if grep -q "Linux 7" /etc/issue; then
-	echo "Running debian wheezy, continuing"
-else
-	echo "Server OS is not Debian Wheezy. This script must be run on a Debian server, release Wheezy (7)." 1>&2
-	exit 1
-fi
-
-# Make sure only root can run our script
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root" 1>&2
    exit 1
